@@ -1,0 +1,182 @@
+.backs{
+    height: 250px;
+    width: 1920px;
+    background-image: url(images/bg.png);
+    background-size: cover;
+    background-attachment: fixed;
+}
+.aside{ 
+    width: 200px;
+    float: left;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 20px;
+    margin-top: 20px;
+    height: 550px;
+}
+.aside ul{
+    padding-left: 25px;
+}
+h4 a{
+   font-size: 15px;
+}
+h4 a:hover{
+
+    text-align: left;
+    color: red;
+    width: 120px; height: 50px;
+    border: 1px solid none;
+}
+.menu{
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+.menu li{
+    color: #535252;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px;
+    
+}
+.menu li a{
+    color: #535252;
+}
+.menu li a:hover{
+    color: #1488df;
+    
+}
+h3 span{
+    font-size: small;
+    
+}
+#sub2-1{
+    width: 900px;
+}
+.txt img{
+   margin-top: 50px;
+}
+.txt2{
+    width: 1200px;
+    text-align: center;
+}
+.sub2content{
+    margin-left: 70px;
+}
+.home{
+    width: 770px;
+    border-bottom: 1px solid #535252;
+    padding-bottom: 20px;
+}
+.home p{
+    margin-top: 50px;
+}
+.home ul > li{
+display: inline-block;
+}
+.home ul > li:first-child{
+    padding-right: 550px;
+}
+#center{
+    width: 700px;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background-image: url(images/content2.png);
+    background-repeat: no-repeat;
+    height: 500px;
+}
+.home h1{
+    color:#1488df;
+}
+.home img{
+   float: right;
+}
+
+.page2{
+    
+    width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+.box1{
+    position: relative;
+    border: 1px solid #ccc;
+    background: #f0f0f0;
+    width: 760px; height: 130px;
+    margin-left: 270px;
+}
+.box2{
+    margin-top: 15px;
+    margin-left: 10px;
+    text-align: center;
+    background: #fff;
+    width: 200px; height: 100px;
+}
+.box2 p{
+    margin-top: 5px;
+    padding-top: 10px;
+}
+.box3{
+    position: absolute;
+    top: 10px;
+    padding-left: 230px;
+    padding-top: 20px;
+}
+.box3 h4{
+    margin-bottom: 10px;
+}
+
+.call2{
+    margin-top: 70px;
+    width: 200px; height: 150px;
+    float: left;
+    border: 1px solid #1488df;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    background: #1488df;
+    text-align: center;
+    color: #ffffff;
+    padding-top: 35px;
+
+}
+.call2 p{
+    color: white;
+    padding-bottom: 20px;
+}
+.call2 h2{
+    padding-bottom: 20px;
+}
+#aside2{
+    position: relative;
+    bottom: 1900px;
+}
+#aside2-1{
+    position: relative;
+    bottom: 1100px;
+}
+.quick{
+    position: absolute;
+    left: 1400px; top: 50px;
+    border-radius: 30px; 
+    width: 190px; height: 330px;
+    background: #1488df;
+    padding-top: 20px;
+    text-align: center;
+    padding-right: 50px;
+    margin-right: 150px;
+}
+.quick_menu li{
+    width: 160px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+}
+.quick_menu a{
+    color: white;
+    font-size: 13px;
+}
+.quick_menu img{
+    padding-bottom: 10px;
+    padding-left: 50px;
+}
+
