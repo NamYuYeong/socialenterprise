@@ -1,27 +1,87 @@
- var num = 1; // 이미지 번호
-        
-        // gallery(방향값 0, 1)
-        function gallery(direct){
-            
-            // 방향값 판단하여 이전 또는 다음 이미지로
-            if(direct){
-                // 마지막 이미지면 끝
-                if(num == 3) return;
-                num++; // 이미지 번호 증가
-            }else{
-                // 이전 이미지
-                if(num == 1) return;
-                num--;
-            }
-            
-            // 이미지 출력
-            // 이미지 태그 선택
-            var imgTag = document.getElementById('photo');
-            
-            // 이미지 태그의 파일명 변경(src속성)
-            // setAttribute('속성명', '변경내용')
-            imgTag.setAttribute('src', 'images/images' + num + '.jpg');
-            
-        }
+/*****************************************************js*******************************************************/
 
- 
+// moveType (0:left / 1:right) 
+var moveType = 1; 
+// 이동시간간격 3초 
+var moveSpeed = 1000; 
+// 움직이는 작업중 다시 명령 받지 않음 
+var moveWork = false; 
+// 일시정지 flag 
+var movePause = false; 
+function imgMove(){ 
+    if(moveWork==false){ 
+       // 0d\일경우 left방향 
+      if(moveType==0){ 
+         // 맨처음 이미지의 폭 
+         var aWidth = $(".rollDiv > div > a:first").width(); 
+         // 롤링마지막에 맨처음의 a태그 추가 
+         $(".rollDiv > div").append("<a href=\""+$(".rollDiv > div > a:first").attr("href")+"\">" + $(".rollDiv > div > a:first").html()+ "</a>"); 
+         // 맨처음이미지를 왼쪽으로 이동시킨다. 
+         $(".rollDiv > div > a:first").animate({marginLeft:-aWidth},{duration:moveSpeed,step:function(){ 
+         // 이동중 만약 일시정지 flag가 true라면 
+         if(movePause==true){ 
+            // 이동을 멈춘다 
+            $(this).stop(); 
+         } 
+         },complete:function(){ 
+         // 이동을 마친후 첫번째 a태그를 지워버린다 
+         $(this).remove(); 
+         // 이미지 움직이는것을 다시 실행 
+         imgMove(); 
+      }}); 
+      }else{ 
+      // 마지막 a태그의 폭 
+       var aWidth = $(".rollDiv > div > a:last").width(); 
+       // a태그 앞에 마지막의 a태그를 생성한다 단 스타일은 마지막 a태그의 폭만큼 빼준다 
+       $("<a href=\"" + $(".rollDiv > div > a:last").attr("href")+ "\" style=\"margin-left:-" + aWidth + "px\">" + $(".rollDiv > div > a:last").html()+ "</a>").insertBefore(".rollDiv > div > a:first") 
+       // 맨처음 a태그의 margin-left를 다시 0으로 맞춰준다. 
+      $(".rollDiv > div > a:first").animate({marginLeft:0},{duration:moveSpeed,step:function(){ 
+       // 이동중 만약 일시정지 flag가 true라면 
+       if(movePause==true){ 
+          // 이동을 멈춘다 
+          $(this).stop(); 
+       } 
+       },complete:function(){ 
+       // 이동을 마친후 마지막 a태그를 지워버린다 
+       $(".rollDiv > div > a:last").remove(); 
+       // 이미지 움직이는것을 다시 실행 
+       imgMove(); 
+    }}); 
+ } 
+ } 
+ } 
+ function goMove(){ 
+    // 일시정지가 풀려있을 경우를 대비하여 일시정지를 풀러준다 
+    movePause=false; 
+    // 0d\일경우 left방향 
+    if(moveType==0){ 
+       imgMove(); 
+       }else{ 
+       $(".rollDiv > div > a:first").animate({marginLeft:0},{duration:moveSpeed,step:function(){ 
+       // 이동중 만약 일시정지 flag가 true라면 
+       if(movePause==true){ 
+          // 이동을 멈춘다 
+          $(this).stop(); 
+      } 
+       },complete:function(){ 
+      // 이동을 마친후 마지막 a태그를 지워버린다 
+      //$(".RollDiv > div > a:last").remove(); 
+      // 이미지 움직이는것을 다시 실행 
+      imgMove(); 
+   }}); 
+}
+   
+}
+imgMove();
+$('.btn_left').mouseover(function(){
+  moveType=0;
+});
+$('.btn_right').mouseover(function(){
+  moveType=1;
+});
+$('.bn_wrap').mouseover(function(){
+  movePause=true;
+});
+$('.bn_wrap').mouseleave(function(){
+  goMove();
+});

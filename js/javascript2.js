@@ -20,3 +20,4 @@ var num = 1; //이미지 번호
             //setAttribute('속성명', '변경내용')
             imgTag.setAttribute('src', 'images/image' + num + '.jpg');
         }
+
