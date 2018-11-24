@@ -59,36 +59,72 @@ header #find button{
     height: 28px;
     background: none;
 }
-.main_menu{
-    width: 1200px;
+#main_menu{
     background:#057ec7;
-    height: 70px;
+    height: 60px;
+    position: relative;
+    margin: 0 auto;
     width: 100%;
+/*   border: 1px solid #999;*/
+    letter-spacing: -0.8px;
+    z-index: 9999;
+    padding-top: 5px;
 }
-.main_menu ul{
-    width: 1200px;
+#main_menu >.depth1{
+     margin: 0 auto;
+    width: 100%;
+    position: absolute;
 }
 
 
-.main_menu ul li{
-    
-    display: inline-block;
+#main_menu >.depth1 > li{
+    float: left;
+    width: 20%;
     font-size: 1.5em;
-    margin: 20px;
-    padding-right: 60px;
-   
 }
-.main_menu ul li a:hover{
-    color: yellow;
+#main_menu > .depth1 > li > a{
+   display: block;
+   padding: 10px 0px;
+   font-size: 1.2em;
+   font-weight: bold;
+   height: 40px;
+    text-align: center;
+   vertical-align: middle;
+    color: white;
 }
-.main_menu ul li:first-child{
-    margin-left: 150px;
+#main_menu > .depth1 > li > a:hover{
+    color: #fffb8b;
 }
-.main_menu ul a{
+#main_menu ul a{
     text-decoration: none;
     color: white;
     
 }
+/* 2단계 메뉴 */
+#main_menu .depth2{
+/*    padding-top: 20px;*/
+   background: rgba(115, 140, 222, 0.69);
+   height: 180px;
+   border-right: 1px solid rgba(255, 255, 255, 0.24);
+   margin-top:15px;
+    
+}
+#main_menu .depth2 > li{
+    border-bottom:1px solid rgba(255, 255, 255, 0.24); 
+}
+#main_menu .depth2 > li > a{
+   display: block;
+   padding: 10px 0;
+   font-weight: bold;
+    padding-left: 20px;
+}
+
+#main_menu .depth2 > li > a:hover{
+   color: #fff;
+    width: 100%;
+    background: rgba(174, 193, 229, 0.74);
+}
+
 #sub_menu{
     width: 100%;
     margin-bottom: 50px;
@@ -111,6 +147,12 @@ header #find button{
 #sub_menu a:hover{
     color: yellow;
 }
+#sub_menu a img:hover{
+    width: 90px;
+}
+#sub_menu a .icon3:hover{
+    width: 125px;
+}
 
 #sub_menu ul li a{
     text-decoration: none;
@@ -125,13 +167,14 @@ header #find button{
 #contents{
     max-width:1050px;
     margin: 0 auto;
-    height: 350px;
+    height: 220px;
 }
 #contents> ul{
-    margin-right: 20px;
+    
 }
 #contents> ul> li{
     list-style: none;
+    margin-left: 50px;
 }
 
 #info{
@@ -139,7 +182,7 @@ header #find button{
     line-height: 2em;
     padding-right: 130px;
     float: left;
-    padding-bottom: 50px;
+
 }
 #info li{
     clear: both;
@@ -161,6 +204,43 @@ header #find button{
 }
 #info .date{
     float: right;
+}
+#info2{
+    line-height: 2em;
+    float: left;
+
+}
+#info2 li{
+    clear: both;
+    line-height: 2.3;
+}
+
+#info2 h2{
+    font-size: 20px;
+    padding-bottom: 50px;
+
+}
+#info2 h2 a:hover{
+   color:  dodgerblue;
+}
+
+#info2 .subject{
+  float: left;
+}
+#info2 .date{
+    float: right;
+}
+
+#contents2{
+     max-width:1050px;
+    margin: 0 auto;
+    height: 200px;
+}
+#contents2 >div{
+      display: inline-block;
+}
+.num{
+    padding-left: 50px;
 }
 
 .nav{
@@ -229,7 +309,7 @@ color: darkslateblue;
 }
 .news_select{
    position: absolute;
-    right: 120px; top:-40px;
+    right: 165px; top:-40px;
 }
 .news_select select{
    width: 200px;
@@ -278,6 +358,7 @@ footer #select select{
 }
 footer button img{
     width: 35px;
+    height: 25px;
 }
 
 .f_1 .blue{
@@ -299,6 +380,7 @@ footer button img{
             position: relative;
             width: 400%;/*100%(배너 폭)x 이미지 장수*/
             margin-left: -0%;
+            
         }
         #slider > .sliders > img{
             float: left;

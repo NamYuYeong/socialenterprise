@@ -149,15 +149,15 @@ display: inline-block;
 }
 #aside2{
     position: relative;
-    bottom: 1900px;
+    bottom: 1600px;
 }
 #aside2-1{
     position: relative;
-    bottom: 1100px;
+    bottom: 930px;
 }
 .quick{
     position: absolute;
-    left: 1400px; top: 50px;
+    left: 1400px; top: 200px;
     border-radius: 30px; 
     width: 190px; height: 330px;
     background: #1488df;
