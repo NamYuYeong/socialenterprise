@@ -92,11 +92,20 @@ display: inline-block;
    float: right;
 }
 
+
 .page2{
     
     width: 1200px;
     margin: 0 auto;
     margin-bottom: 50px;
+    height: 1600px;
+}
+.page3{
+    
+    width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    height: 880px;
 }
 
 .box1{
@@ -153,7 +162,7 @@ display: inline-block;
 }
 #aside2-1{
     position: relative;
-    bottom:1600px;
+    bottom:1650px;
 }
 .quick{
     position: absolute;
