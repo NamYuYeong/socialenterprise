@@ -1,6 +1,6 @@
 .backs{
     height: 250px;
-    width: 1920px;
+    max-width:1920px;
     background-image: url(images/bg.png);
     background-size: cover;
     background-attachment: fixed;
@@ -149,11 +149,11 @@ display: inline-block;
 }
 #aside2{
     position: relative;
-    bottom: 960px;
+    bottom: 920px;
 }
 #aside2-1{
     position: relative;
-    bottom: 930px;
+    bottom:1600px;
 }
 .quick{
     position: absolute;
